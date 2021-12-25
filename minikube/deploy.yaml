@@ -16,6 +16,7 @@ metadata:
 spec:
   ports:
     - port: 5432
+      protocol: TCP
   selector:
     app: odoo-shop
     tier: backend
