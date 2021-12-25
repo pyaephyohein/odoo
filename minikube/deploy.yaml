@@ -45,6 +45,8 @@ spec:
       - image: postgres:9.4
         name: odoo-db
         env:
+        - name: POSTGRES_DB
+          value: odoo
         - name: POSTGRES_USER
           value: odoo
         - name: POSTGRES_PASSWORD
@@ -107,12 +109,14 @@ spec:
             value: odoo
           - name: PASSWORD
             value: password
+          - name: DATABASE
+            value: odoo
           securityContext:
             privileged: true
             runAsUser: 0
           ports:
             - containerPort: 8069
-              name: odoo
+              name: odoo-shop
           volumeMounts:
           - name: odoo-pvc
             mountPath: /var/lib/odoo
