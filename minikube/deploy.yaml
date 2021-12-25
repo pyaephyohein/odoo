@@ -12,13 +12,13 @@ metadata:
   name: odoo-db
   namespace: odoo
   labels:
-    app: odoo-shop
+    app: odoo-db
 spec:
   ports:
     - port: 5432
       protocol: TCP
   selector:
-    app: odoo-shop
+    app: odoo-db
     tier: backend
   type: NodePort
 ---
