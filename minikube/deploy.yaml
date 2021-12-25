@@ -72,6 +72,7 @@ metadata:
 spec:
   ports:
     - port: 8069
+      protocol: TCP
   selector:
     app: odoo-shop
     tier: frontend
