@@ -1,0 +1,30 @@
+piVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: db
+  name: db
+  namespace: odoo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      containers:
+        - env:
+            - name: MYSQL_DATABASE
+              value: odoo
+            - name: MYSQL_ROOT_PASSWORD
+              value: odoo
+            - name: SERVICE_NAME
+              value: mysql
+            # args: ["--default-authentication-plugin=mysql_native_password"]
+          image: mysql:5.7.22
+          name: db
+          ports:
+            - containerPort: 3306
