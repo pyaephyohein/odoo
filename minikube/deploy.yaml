@@ -31,6 +31,9 @@ metadata:
 spec:
   strategy:
     type: Recreate
+  selector:
+    matchLabels:
+      app: odoo-db
   template:
     metadata:
       labels:
@@ -83,6 +86,9 @@ metadata:
 spec:
   strategy:
     type: Recreate
+  selector:
+    matchLabels:
+      app: odoo-shop
   template:
     metadata:
       labels:
