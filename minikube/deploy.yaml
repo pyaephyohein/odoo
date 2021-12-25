@@ -46,7 +46,7 @@ spec:
         name: odoo-db
         env:
         - name: POSTGRES_DB
-          value: odoo
+          value: postgres
         - name: POSTGRES_USER
           value: odoo
         - name: POSTGRES_PASSWORD
@@ -109,8 +109,6 @@ spec:
             value: odoo
           - name: PASSWORD
             value: password
-          - name: DATABASE
-            value: odoo
           securityContext:
             privileged: true
             runAsUser: 0
