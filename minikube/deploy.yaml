@@ -37,7 +37,7 @@ spec:
   template:
     metadata:
       labels:
-        app: odoo-shop
+        app: odoo-db
         tier: backend
     spec:
       containers:
