@@ -16,8 +16,15 @@ spec:
         app: odoo
     spec:
       containers:
-      - image: odoo:14
-        imagePullPolicy: Always
-        name: odoo
-        ports:
-        - containerPort: 8069
+        - env:
+            - name: host
+              value: db
+            - name: USER
+              value: root
+            - name: PASSWORD
+              value: odoo
+          image: odoo:14
+          imagePullPolicy: Always
+          name: odoo
+          ports:
+          - containerPort: 8069
