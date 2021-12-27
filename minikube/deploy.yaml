@@ -10,7 +10,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: odoo-db
-  namespace: odoo12
+  namespace: odoo
   labels:
     app: odoo-db
 spec:
@@ -26,7 +26,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: odoo-db
-  namespace: odoo12
+  namespace: odoo
   labels:
     app: odoo-db
 spec:
@@ -68,7 +68,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: odoo-shop
-  namespace: odoo12
+  namespace: odoo
   labels:
     app: odoo-shop
 spec:
@@ -84,7 +84,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: odoo-shop
-  namespace: odoo12
+  namespace: odoo
   labels:
     app: odoo-shop
 spec:
@@ -155,7 +155,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: odoo-pvc
-  namespace: odoo12
+  namespace: odoo
   labels:
     app: odoo-shop
 spec:
@@ -169,7 +169,7 @@ apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: odoo-db-pvc
-  namespace: odoo12
+  namespace: odoo
   labels:
     app: odoo-shop
 spec:
