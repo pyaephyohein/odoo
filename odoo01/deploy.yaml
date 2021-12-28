@@ -179,19 +179,18 @@ spec:
     requests:
       storage: 5Gi
 ---
-apiVersion: extensions/v1
+apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  namespace: odoo01
-  name: my-ingress
   annotations:
-     kubernetes.io/ingress.class: nginx
+    kubernetes.io/ingress.class: "nginx"
+  name: cluster-ingress
+  namespace: odoo01
 spec:
   rules:
   - host: odoo1.pph.kyonpyaw.org
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: odoo-shop
           servicePort: 8069
