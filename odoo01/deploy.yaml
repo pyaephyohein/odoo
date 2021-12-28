@@ -75,6 +75,7 @@ spec:
   ports:
     - port: 8069
       protocol: TCP
+      targetPort: 80
   selector:
     app: odoo-shop
     tier: frontend
