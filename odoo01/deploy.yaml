@@ -188,7 +188,7 @@ metadata:
   namespace: odoo01
 spec:
   rules:
-  - host: odoo1.pph.kyonpyaw.org
+  - host: pph.kyonpyaw.org
     http:
       paths:
       - backend:
