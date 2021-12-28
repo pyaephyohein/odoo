@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+  name: cluster-ingress
+  namespace: default
+spec:
+  rules:
+  - host: hi.phuonghau.com
+    http:
+      paths:
+      - backend:
+          serviceName: healthinsight-app
+          servicePort: 3001
+  - host: phuonghau.com
+    http:
+      paths:
+      - backend:
+          serviceName: portfolio
+          servicePort: 3000
