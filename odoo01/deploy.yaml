@@ -193,4 +193,4 @@ spec:
       paths:
       - backend:
           serviceName: odoo-shop
-          servicePort: 32004
+          servicePort: 8069
